@@ -1,9 +1,7 @@
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function ();
     
-    const celsiusInput = document.getElementById('celsius');
-    const fahrenheitInput = document.getElementById('fahrenheit');
-    const calculationMethodElement = document.getElementById('calculation-method');
+    const celsius = document.getElementById('celsius');
+    const fahrenheit = document.getElementById('fahrenheit');
     const convertButton = document.getElementById('convert');
     const reverseButton = document.getElementById('reverse');
     const resetButton = document.getElementById('reset');
@@ -11,44 +9,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
     convertButton.addEventListener('click', () => {
      
-      const celsiusValue = parseFloat(celsiusInput.value);
-      if (!isNaN(celsiusValue)) {
-        const fahrenheitValue = (celsiusValue * 9/5) + 32;
-        fahrenheitInput.value = fahrenheitValue.toFixed(2);
-        
-        
-        const calculationMethod = `
-          ${celsiusValue}°C × (9/5) = ${(celsiusValue * 9/5).toFixed(2)} 
-          ${(celsiusValue * 9/5).toFixed(2)} + 32 = ${fahrenheitValue.toFixed(2)}°F`;
-        calculationMethodElement.innerText = calculationMethod;
-      } else {
-        alert('Masukkan nilai Celsius yang valid.');
-      }
+      const celsiusResult = parseFloat(celsiusInput.value);
+      if (!isNaN(celsiusResult)) {
+        const fahrenheitResult = (celsiusResult * 9/5) + 32;
+        fahrenheitInput.value = fahrenheitResult.toFixed(2);} else 
+      {alert('Warning! Nilai yang dimasukkan harus valid.');}
     });
   
     
     reverseButton.addEventListener('click', () => {
       
-      const fahrenheitValue = parseFloat(fahrenheitInput.value);
-      if (!isNaN(fahrenheitValue)) {
-        const celsiusValue = (fahrenheitValue - 32) * 5/9;
-        celsiusInput.value = celsiusValue.toFixed(2);
-        
-       
-        const calculationMethod = `
-          ${fahrenheitValue}°F - 32 = ${(fahrenheitValue - 32).toFixed(2)} 
-          ${(fahrenheitValue - 32).toFixed(2)} × (5/9) = ${celsiusValue.toFixed(2)}°C`;
-        calculationMethodElement.innerText = calculationMethod;
-      } else {
-        alert('Masukkan nilai Fahrenheit yang valid.');
-      }
+      const fahrenheitResult = parseFloat(fahrenheitInput.value);
+      if (!isNaN(fahrenheitResult)) {
+        const celsiusValue = (fahrenheitResult - 32) * 5/9;
+        celsiusInput.value = celsiusResult.toFixed(2);} 
+      else {alert('Warning! Nilai yang dimasukkan harus valid.');}
     });
   
-   
-    resetButton.addEventListener('click', () => {
-      
-      celsiusInput.value = '';
-      fahrenheitInput.value = '';
-      calculationMethodElement.innerText = ''; 
-    });
   });

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html lang="eng">
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mini Project Kalkulator Suhu RevoU</title>
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Kalkulator Konversi Suhu</h1>
+
+    </header>
+
+    <main>
+        <!--Form Content -->
+        <section>
+            <!--Instruksi-->
+            <article>Masukkan suhu derajat Celsius (&deg;C) ke kotak di bawah, lalu klik tombol 
+                Konversi untuk mendapatkan hasil konversi dalam bentuk Fahrenheit (&deg;F).
+            </article>
+
+            <!--Inputan Suhu-->
+            <form>
+                <div>
+                    <label for="Celcius">Celcius (&deg;C):</label>
+                </div>
+                    <input type="number" id="Celcius"/>
+
+                <div>
+                    <button id="convert">Konversi</button>
+                    <button id="reset">Reset</button>
+                    <button id="Reverse">Reverse</button>
+                </div>
+            </form>
+
+            <!--Hasil Inputan-->
+            
+                <div>
+                    <label for="Fahreinhert">Fahrenheit (&deg;F):</label>
+                </div>
+
+                    <input type="number" id="Fahreinhert"/>
+
+            <!--Cara Kalkulasi-->
+            <div>
+                <div>
+                    <label for="how-to-suhu">Cara Kalkulasi:</label>
+                    <span id="calculation-method"></span>
+                </div>
+
+                <textarea id="how to suhu"></textarea>
+            </div>
+        </section>
+
+        <!--Info Content-->
+        <section>
+            <header>
+                <h2>Cara Konversi Dari Celcius (&deg;C) ke Fahreinhert (&deg;F)</h2>
+            </header>
+
+            <article>
+                <p>suhu
+                    <span class="suhu-style">S</span> dalam derajat Fahreinhert (&deg;F) sama dengan suhu <span class="suhu-style">S</span> dalam derajat 
+                    Celcius (&deg;C) kali <sup>9</sup>/<sub>5</sub> tambah 32.
+                </p>
+
+
+                <!--Rumus Konversi-->
+
+                <p>
+                    <span class="suhu-style">S</span> <sub>(&deg;F)</sub> = (<span class="suhu-style">S</span> <sub>(&deg;C)</sub> x <sup>9</sup>/<sub>5</sub> + 32) 
+                </p>
+                <p>atau</p>
+                <p>
+                    <span class="suhu-style">S</span> <sub>(&deg;F)</sub> = (<span class="suhu-style">S</span> <sub>(&deg;C)</sub> x 1.8 + 32) 
+                </p>
+            </article>
+        </section>
+
+
+    </main>
+
+    <script>src="javascript/script.js"</script>
+
+    
+
+</body>
+
+</html>
